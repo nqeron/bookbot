@@ -8,6 +8,7 @@ def get_num_words(text):
 def get_num_characters(text):
     d = {}
     for c in text:
+        if c in [' ', "\n"]: continue
         if c.lower() not in d:
             d[c.lower()] = 0
         d[c.lower()] += 1
